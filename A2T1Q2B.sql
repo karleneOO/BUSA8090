@@ -1,0 +1,1 @@
+mysql -u awkologist -p world_x -e 'SELECT c.Name, c1.Name, l.Percentage FROM (country c LEFT OUTER JOIN city c1 ON c.Capital=c1.ID) LEFT OUTER JOIN countrylanguage l ON c1.CountryCode=l.CountryCode WHERE Language = "English" AND Percentage > 50;'
